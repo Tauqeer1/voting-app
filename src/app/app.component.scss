@@ -26,5 +26,38 @@
 
 .submit-button {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px 10px 10px;
+}
+
+.voting-card {
+  width: 300px;
+  margin: 5px 5px 5px 5px;
+  border: 1px solid;
+}
+
+.voting-card .voting-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  justify-content: center;
+  align-items: center;
+}
+
+.voting-card-content h1 {
+  font-size: 70px;
+}
+
+.voting-card-content p {
+  font-size: 30px;
+}
+
+.voting-card-action-buttons {
+  display: flex;
+  justify-content: flex-end;
 }

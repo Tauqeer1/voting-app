@@ -22,34 +22,33 @@
     </mat-card-actions>
   </mat-card>
 </div>
-<div style="margin: 10px 10px 10px 10px; display: flex; flex-wrap: wrap;">
-  <mat-card style="width: 300px; margin: 5px 5px 5px 5px; border: 1px solid;">
-    <mat-card-title-group>
-      <mat-card-title>Title</mat-card-title>
-      <mat-card-subtitle>Link</mat-card-subtitle>
-    </mat-card-title-group>
-    <mat-card-content>
-      <div style="display: flex; flex-direction: column; height: 140px; justify-content: center; align-items: center;">
-        <h1 style="font-size: 70px;">1</h1>
-        <p style="font-size: 30px;">Points</p>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <div style="display: flex; justify-content: end;">
-        <div style="display: flex; justify-content: end;">
-          <button mat-icon-button color="primary">
-            <mat-icon>thumb_up</mat-icon>
-          </button>
+<div class="main-container">
+  <ng-container *ngIf="votingList.length > 0">
+    <ng-container *ngFor="let voteObj of votingList">
+      <mat-card class="voting-card">
+        <mat-card-title-group>
+          <mat-card-title>{{voteObj.title}</mat-card-title>
+          <mat-card-subtitle>{{voteObj.link}}</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+          <div class="voting-card-content">
+            <h1>{{voteObj.voteCount}}</h1>
+            <p>Points</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="voting-card-action-buttons">
+            <button mat-icon-button color="primary">
+              <mat-icon>thumb_up</mat-icon>
+            </button>
+            <button mat-icon-button color="primary">
+              <mat-icon>thumb_down</mat-icon>
+            </button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
 
-          <button mat-icon-button color="primary">
-            <mat-icon>thumb_down</mat-icon>
-          </button>
-        </div>
-
-
-      </div>
-    </mat-card-actions>
-  </mat-card>
-
+  </ng-container>
 
 </div>
